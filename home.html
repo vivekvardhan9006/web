@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>KMIT hub</title>
+</head>
+<body>
+    <header>
+        <div id="kmit">KMIT</div>
+        <div id="hub">hub</div>
+    </header>
+    <main>
+        <div id="navbar">
+            <a class="nav" href="home.html">Home</a>
+            <a class="nav" href="categories.html">Categories</a>
+            <a class="nav" href="top.html">Top Videos</a>
+            <div class="dropdown">
+                <button class="dropbtn">Videos</button>
+                <div class="dropdown-content">
+                    <a href="praneeth.mp4">Video 1</a>
+                    <a href="gks.mp4">Video 2</a>
+                    <a href="water_fight.mp4">Video 3</a>
+                </div>
+            </div>
+            <form id="search">
+                <button type="submit"  id="search_icon"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Search" id="search_box" required>
+            </form>
+        </div>
+        <br>
+        <div id="adv1">
+            <h2>Sponsored Ad</h2>
+            <img src="https://picsum.photos/200/300?grayscale" alt="Ad Image ">
+            <p>Check out our latest offer! <a href="" target="_blank">Click here</a> to learn more.</p>
+        </div>
+        <div id="adv2">
+            <h2>Sponsored Ad</h2>
+            <img src="https://picsum.photos/200/300?grayscale" alt="Ad Image ">
+            <p>Discover our new collection! <a href="" target="_blank">Click here</a> to explore.</p>
+        </div>
+        <div id="video_container">
+            <video class="video" alt="video1" src="praneeth.mp4" controls></video>
+            <video class="video" alt="video1" src="gks.mp4" controls></video>
+            <video class="video" alt="video1" src="water_fight.mp4" controls></video>
+            <video class="video" alt="video1" src="" controls></video>
+            <video class="video" alt="video1" src="" controls></video>
+        </div>
+</main>
+<script>
+    document.querySelectorAll('.video').forEach(video => {
+        video.addEventListener('mouseover', () => {
+            video.play();
+        });
+
+        video.addEventListener('mouseout', () => {
+            video.pause();
+            video.currentTime=0;
+        });
+    });
+</script>
+
+</body>
+</html>
